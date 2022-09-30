@@ -1,4 +1,6 @@
 import React from 'react'
+import Layout from '@lekoarts/gatsby-theme-cara/src/components/layout'
+import Footer from '@lekoarts/gatsby-theme-cara/src/components/footer'
 
 const data = {
   name: 'Josua Blejeru',
@@ -15,12 +17,13 @@ const data = {
 const Impressum = () => {
 
   return (
-    <>
+    <Layout>
       <h1 className="text-3xl font-bold underline m-3">Impressum</h1>
       <ul>
         {Object.values(data).map(entry => (<li className='m-3 '>{entry}</li>))}
       </ul>
-    </>
+      <Footer />
+    </Layout>
   )
 }
 
