@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '@lekoarts/gatsby-theme-cara/src/components/layout'
 import Footer from '@lekoarts/gatsby-theme-cara/src/components/footer'
+import { Flex } from 'theme-ui'
 
 const data = {
   name: 'Josua Blejeru',
@@ -18,11 +19,11 @@ const Impressum = () => {
 
   return (
     <Layout>
-      <h1 className="text-3xl font-bold underline m-3">Impressum</h1>
-      <ul>
-        {Object.values(data).map(entry => (<li className='m-3 '>{entry}</li>))}
-      </ul>
-      <Footer />
+      <Flex sx={{flexDirection: 'column', alignItems: 'center'}}>
+        <h1>Impressum</h1>
+          {Object.values(data).map(entry => (<p>{entry}</p>))}
+        <Footer />
+      </Flex>
     </Layout>
   )
 }
