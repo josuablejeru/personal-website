@@ -68,6 +68,5 @@ module.exports = {
         environments: ['production', 'development']
       }
     },
-    'gatsby-plugin-postcss'
   ].filter(Boolean),
 }
