@@ -9,13 +9,6 @@ const CaraExtended = () => {
   return (
     <>
       <Cara />
-      <CookieConsent
-          location="bottom"
-          buttonText="Accept"
-          declineButtonText="Decline"
-          cookieName="gatsby-gdpr-google-analytics">
-          This website uses cookies to enhance the user experience.
-        </CookieConsent>
     </>
   )
 }
