@@ -1,19 +1,16 @@
 {
   "private": true,
-  "name": "cara",
-  "description": "Playful and Colorful One-Page portfolio featuring Parallax effects and animations",
-  "version": "0.2.11",
-  "author": "LekoArts <hello@lekoarts.de>",
-  "license": "0BSD",
-  "starter-name": "gatsby-starter-portfolio-cara",
+  "author": "Josua Blejeru <josua@blejeru>",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
     "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
+    "build:types": "openapi --input https://72660mexpg.execute-api.eu-central-1.amazonaws.com/openapi.json --output ./src/generated/bookshelf-client -c axios",
     "start": "gatsby develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "format": "prettier --write 'src/**/*.{ts,tsx}' '!src/generated/**/*.{ts,tsx}'"
   },
   "dependencies": {
     "@lekoarts/gatsby-theme-cara": "^3.0.0",
@@ -23,5 +20,9 @@
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.27",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "openapi-typescript-codegen": "^0.23.0",
+    "prettier": "1.18.2"
   }
 }
