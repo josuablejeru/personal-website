@@ -6,7 +6,12 @@ import BookContentCard from '../components/BookContentCard'
 const Bookshelves = () => {
   const [books, setBooks] = useState<BookResponse>()
   
-  const bg = 'linear-gradient(to right, #D4145A 0%, #FBB03B 100%)'
+  const bg = [
+    'linear-gradient(to right, #D4145A 0%, #FBB03B 100%)',
+    'linear-gradient(to right, #662D8C 0%, #ED1E79 100%)',
+    'linear-gradient(to right, #009245 0%, #FCEE21 100%)',
+    'linear-gradient(to right, #D585FF 0%, #00FFEE 100%)'
+  ]
 
   useEffect(() => {
     BooksService.getBookshelfBooks()
@@ -16,8 +21,8 @@ const Bookshelves = () => {
 
   return (
     <Layout>
-      {books?.response?.map((bookResponse: Book) => (
-        <BookContentCard book={bookResponse} bg={bg}/>
+      {books?.response?.map((bookResponse: Book, index: number) => (
+        <BookContentCard book={bookResponse} bg={bg[index % bg.length]}/>
       ))}
     </Layout>
   )
