@@ -20,7 +20,7 @@ const Impressum = () => {
     <Layout>
       <Flex sx={{ flexDirection: 'column', alignItems: 'center' }}>
         <h1>Impressum</h1>
-        {Object.values(data).map(entry => (
+        {Object.values(data).map((entry) => (
           <p>{entry}</p>
         ))}
         <Footer />
