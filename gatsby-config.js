@@ -1,6 +1,6 @@
-require(`dotenv`).config()
+require(`dotenv`).config();
 
-const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
+const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
 
 module.exports = {
   siteMetadata: {
@@ -10,17 +10,17 @@ module.exports = {
     siteTitle: `Josua Blejeru`,
     siteTitleAlt: `Josua Blejeru - DevOps Engineer and Software Craftsman`,
     siteHeadline: `Josua Blejeru - DevOps Engineer and Software Craftsman`,
-    siteUrl: `https://cara.lekoarts.de`,
+    siteUrl: `https://www.josuablejeru.com`,
     siteDescription: `Josua Blejeru personal space on the internet`,
     siteLanguage: `en`,
     siteImage: `/banner.jpg`,
-    author: `@josuablejeru`,
+    author: `@josuablejeru`
   },
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-cara`,
       // See the theme's README for all available options
-      options: {},
+      options: {}
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -38,15 +38,15 @@ module.exports = {
           {
             src: `/android-chrome-192x192.png`,
             sizes: `192x192`,
-            type: `image/png`,
+            type: `image/png`
           },
           {
             src: `/android-chrome-512x512.png`,
             sizes: `512x512`,
-            type: `image/png`,
-          },
-        ],
-      },
+            type: `image/png`
+          }
+        ]
+      }
     },
     `gatsby-plugin-gatsby-cloud`,
     shouldAnalyseBundle && {
@@ -54,8 +54,8 @@ module.exports = {
       options: {
         analyzerMode: `static`,
         reportFilename: `_bundle.html`,
-        openAnalyzer: false,
-      },
-    },
-  ].filter(Boolean),
-}
+        openAnalyzer: false
+      }
+    }
+  ].filter(Boolean)
+};
