@@ -22,8 +22,13 @@ const Bookshelves = () => {
 
   return (
     <Layout>
-      <Heading>Bookshelf</Heading>
-      <Text>
+      <Heading sx={{ textAlign: 'center' }}>Bookshelf</Heading>
+      <Text
+        sx={{
+          textAlign: 'center',
+          overflowWrap: 'break-word',
+        }}
+      >
         As an avid reader, I am always on the lookout for books that are
         informative, thought-provoking, and just plain enjoyable. Over the
         years, I have come across a number of books that have really stood out
@@ -45,7 +50,7 @@ const Bookshelves = () => {
         ))}
       </Flex>
 
-      <Text>
+      <Text sx={{ fontStyle: 'italic', color: 'lightgray' }}>
         The books and cover art displayed on this website are sourced from
         various sources, including Google Books. These books and cover art are
         provided for informational and promotional purposes only, and are not
